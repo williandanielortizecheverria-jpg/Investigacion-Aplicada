@@ -1,0 +1,231 @@
+/* colores generales de toda la pagina */
+:root {
+    --morado: #6247f5;
+    --morado-oscuro: #4b33d6;
+    --azul-noche: #1a1238;
+    --gris-texto: #6b6b80;
+    --fondo: #f5f5f7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    background-color: var(--fondo);
+    color: var(--azul-noche);
+}
+
+/* Ancho máximo del contenido en escritorio */
+.contenedor {
+    max-width: 1040px;
+}
+
+section[id] {
+    scroll-margin-top: 70px;          /* esto hace que el menu no tape el titulo al navegar */
+}
+
+.morado {
+    color: var(--morado);
+}
+
+/* parte menu */
+.logo {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--azul-noche);
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--azul-noche);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible {
+    color: var(--morado);
+}
+
+/* parte presnetacion */
+.titulo {
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-size: clamp(2.2rem, 8vw, 4.2rem);
+}
+
+.resumen {
+    color: var(--gris-texto);
+    font-size: 0.85rem;
+    max-width: 380px;
+}
+
+.foto {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 1.2rem;
+    background-color: #d9d9de;        /* se ve mientras no exista la imagen */
+}
+
+/* los botones */
+.btn-morado {
+    background-color: var(--morado);
+    border-color: var(--morado);
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-morado:hover,
+.btn-morado:focus-visible {
+    background-color: var(--morado-oscuro);
+    border-color: var(--morado-oscuro);
+    color: #fff;
+}
+
+.btn-contorno {
+    background-color: transparent;
+    border: 1px solid var(--azul-noche);
+    color: var(--azul-noche);
+    font-weight: 600;
+}
+
+.btn-contorno:hover,
+.btn-contorno:focus-visible {
+    background-color: var(--azul-noche);
+    color: #fff;
+}
+
+/* titulos de la seccion */
+.subtitulo {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* habilidadess */
+.habilidad {
+    background-color: #fff;
+    border-radius: 0.8rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(26, 18, 56, 0.06);
+}
+
+.habilidad i {
+    display: block;
+    color: var(--morado);
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+}
+
+.habilidad span {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* parte d proyectos */
+.ver-todos {
+    color: var(--morado);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ver-todos:hover {
+    text-decoration: underline;
+}
+
+.proyecto {
+    background-color: #fff;
+    border-radius: 0.8rem;
+    overflow: hidden;                 /*recorta el degradado a las esquinas redondeadas*/
+    box-shadow: 0 2px 8px rgba(26, 18, 56, 0.06);
+    height: 100%;
+}
+
+.proyecto-img {
+    height: 100px;
+}
+
+.degradado-1 { background: linear-gradient(135deg, #6247f5, #9a89ff); }
+.degradado-2 { background: linear-gradient(135deg, #ff7e5f, #feb47b); }
+.degradado-3 { background: linear-gradient(135deg, #1fa99b, #7be0c2); }
+
+.proyecto-cuerpo {
+    padding: 0.9rem 1rem 1rem;
+}
+
+.proyecto-cuerpo h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.proyecto-cuerpo p {
+    color: var(--gris-texto);
+    font-size: 0.75rem;
+    margin-bottom: 0.6rem;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: var(--fondo);
+    border: 1px solid #e3e3e8;
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.5rem;
+    margin-right: 0.25rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+/* contacto */
+.contacto {
+    background-color: var(--azul-noche);
+    color: #fff;
+}
+
+.contacto-titulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.contacto-texto {
+    color: #c4c1d6;
+    font-size: 0.8rem;
+    max-width: 260px;
+}
+
+.contacto .form-control {
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.contacto .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(98, 71, 245, 0.5);
+}
+
+.redes {
+    gap: 1rem;
+}
+
+.redes a {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.redes a:hover {
+    color: #b3a6ff;
+}
+
+.nota {
+    color: #c4c1d6;
+    font-size: 0.7rem;
+}
+
+/* pie de la pagina */
+.pie {
+    color: var(--gris-texto);
+    font-size: 0.75rem;
+}
